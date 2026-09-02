@@ -16,8 +16,12 @@ Aplicación web para solicitar, aprobar y controlar el acceso al Foro de Ciberse
 
 - `ADMIN_KEY`: clave de acceso al panel y al escáner.
 - `TICKET_SECRET`: secreto aleatorio de alta entropía para firmar los boletos.
+- `RESEND_API_KEY`: llave privada de la cuenta de Resend.
+- `EMAIL_FROM`: remitente verificado, por ejemplo `Foro ACLUVAQ <foro@dominio.org>`.
 
 Los secretos no deben incluirse en el repositorio. La validación institucional rechaza dominios personales conocidos; no sustituye una verificación de propiedad mediante correo de confirmación.
+
+Los envíos se registran en `email_deliveries`. Si Resend no está configurado o presenta una interrupción, la solicitud se conserva y el administrador puede reenviar posteriormente el boleto.
 
 ## Rutas
 
